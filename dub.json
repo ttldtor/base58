@@ -1,0 +1,10 @@
+{
+    "authors": [
+        "ttldtor <ttldtor@gmail.com>"
+    ],
+    "name": "base58",
+    "description": "base58 library written in D",
+    "copyright": "Copyright (c) 2022, ttldtor",
+    "license": "Unlicense",
+    "targetType": "library"
+}
