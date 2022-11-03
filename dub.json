@@ -6,5 +6,25 @@
     "description": "base58 library written in D",
     "copyright": "Copyright (c) 2022, ttldtor",
     "license": "Unlicense",
-    "targetType": "library"
+    "targetType": "library",
+    "targetPath": "bin",
+
+    "configurations": [
+        {
+            "name" : "library"
+        },
+        {
+            "name" : "unittest",
+            "targetType": "executable",
+			"targetName": "ut",
+			"targetPath": "bin",
+			"preBuildCommands": ["dub run unit-threaded -c gen_ut_main -- -f ut_main.d"],
+			"mainSourceFile": "ut_main.d",
+			"sourcePaths": ["src", "unittest"],
+			"importPaths": ["src", "unittest"],
+            "dependencies": {
+                "unit-threaded": "*"
+            }
+        }
+    ]
 }
