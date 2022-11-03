@@ -16,12 +16,11 @@
         {
             "name" : "unittest",
             "targetType": "executable",
-			"targetName": "ut",
-			"targetPath": "bin",
-			"preBuildCommands": ["dub run unit-threaded -c gen_ut_main -- -f ut_main.d"],
-			"mainSourceFile": "ut_main.d",
-			"sourcePaths": ["src", "unittest"],
-			"importPaths": ["src", "unittest"],
+            "targetName": "tests",
+            "targetPath": "bin",
+            "mainSourceFile": "tests/app.d",
+            "sourcePaths": ["tests"],
+
             "dependencies": {
                 "unit-threaded": "*"
             }
